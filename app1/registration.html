@@ -1,0 +1,97 @@
+<html>
+<head>
+<title> User Registration </title>
+<script src="js/validation.js"> </script>
+</head>
+<body>
+<h2> Registration </h2>
+<center>
+<form name="register" action="register.php" method="POST" onSubmit="return validation();">
+<table>
+<tr>
+<td> Username </td>
+<td> : </td>
+<td> <input type="text" name="username" /></td>
+</tr>
+<tr>
+<td> email </td>
+<td> : </td>
+<td> <input type="text" name="email" /></td>
+</tr>
+<tr>
+<td> Password </td>
+<td> : </td>
+<td> <input type="text" name="pwd" /></td>
+</tr>
+
+<tr>
+<td> Confirm Password </td>
+<td> : </td>
+<td> <input type="text" name="cpwd" /></td>
+</tr>
+<tr>
+<td> Gender </td>
+<td> : </td>
+<td> 
+<input type="radio" name="gender" value="male" /> Male 
+<input type="radio" name="gender" value="female" /> Female 
+<input type="radio" name="gender" value="xmale" /> Third Gender 
+</td>
+</tr>
+
+
+<tr>
+<td> Courses </td>
+<td> : </td>
+<td> 
+<input type="checkbox" name="course[]" value="devops" /> DevOps 
+<input type="checkbox" name="course[]" value="phpmysql" /> PHP / MySQL 
+<input type="checkbox" name="course[]" value="azure" /> Microsoft Azure </br>
+<input type="checkbox" name="course[]" value="aws" /> Amazon Ws 
+<input type="checkbox" name="course[]" value="python" /> Python 
+<input type="checkbox" name="course[]" value="linux" /> LInux 
+ 
+</td>
+</tr>
+<tr>
+<td> City </td>
+<td> : </td>
+<td> 
+<select name="city">
+<option value="BG"> Bengaluru </option>
+<option value="HD"> Hyderabad </option>
+<option value="DH"> Delhi </option>
+<option value="MB"> Mumbai </option>
+<option value="CN"> Chennai </option>
+<option value="PN"> Pune </option>
+</select>
+</td>
+
+</tr>
+<tr>
+<td> Summary </td>
+<td> : </td>
+<td> 
+<textarea name="summary" rows="5" cols="80">
+</textarea>
+</td>
+</tr>
+<tr>
+<td> &nbsp; </td>
+<td> &nbsp; </td>
+<td> <input type="hidden" name="regdate" value="<?php echo date('Y-m-d'); ?>" /> </td>
+</tr>
+<tr>
+<td> &nbsp; </td>
+<td> &nbsp; </td>
+<td> 
+<input type="reset" name="clear" value="Clear" />
+<input type="submit" name="submit" value="Register" />
+</td>
+</tr>
+
+</table>
+</form>
+</center>
+</body>
+</html>
