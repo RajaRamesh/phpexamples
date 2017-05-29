@@ -1,0 +1,13 @@
+database: project1
+
+table: 
+create table users (uid int(3) auto_increment PRIMARY KEY,
+username varchar(20) NOT NULL,
+password varchar(255) NOT NULL,
+email varchar(255) NOT NULL,
+gender varchar(8) NOT NULL,
+course varchar(32) NOT NULL,
+city varchar(32) NOT NULL,
+summary text,
+regdate DATE);
+
