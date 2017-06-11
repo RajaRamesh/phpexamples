@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head> 
+	<title> Register </title>
+	<link href="style.css" rel="stylesheet"/>
+</head>
+	<body>
+<nav>
+	<ul>
+	
+	<li> <a href="register.html"> Register </a> </li>
+<li> <a href="userslist.html"> All Registered Users - Method I </a> </li>
+<li> <a href="userslist.php"> All Registered Users - Method II </a> </li>
+<li> <a href="onerecord.php"> Only One Registered User </a> </li>
+	</ul>
+</nav>
+
+<fieldset>
+<legend> User Registration </legend>
+	<form name='register' action='register.php' method='POST'>
+		
+		Username : <input type="text" name='uname' required /> <br/>
+		Password: <input type="password" name='pswd' />  <br/>
+		Confirm Password: <input type="password" name='cpswd' />  <br/>
+		Email: <input type="text" name="mail" value="" /> <br/>
+		Gender: <input type='radio' name='gender' value='M' /> Male
+		<input type='radio' name='gender' value='F'/> Female
+		 <br/>
+		Hobbies:
+		<input type="checkbox" name="hobbies[]" value="books" /> Books 
+		<input type="checkbox" name="hobbies[]" value="internet" /> Internet
+		<input type="checkbox" name="hobbies[]" value="movies" /> Movies
+		 <br/>
+		<input type='hidden' value='<?=date('Y-m-d'); ?>' name='regdate'/>
+		<input type='reset' name='reset' value='Clear'/>
+		<input type='submit' name='submit' value='Register'/>
+
+
+	</form>
+</fieldset>
+
+	</body>
+	</html>

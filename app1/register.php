@@ -1,7 +1,8 @@
 <?php
 require("dbconnection.php");
 //echo "<pre>"; print_r($_POST); exit;
-$uname = $_POST['username'];
+
+$uname = strtolower($_POST['username']);
 $email = $_POST['email'];
 $pwd = SHA1($_POST['pwd']);
 //$cpwd = $_POST['cpwd'];
@@ -16,6 +17,11 @@ $query = "insert into users(username, password, email, gender, course, city, sum
 $result = mysqli_query($con, $query);
 
 if($result) {
-	echo "User registration successfully completed";	
+	//echo "User registration successfully completed";
+	header("Location: registration.html?status=1");	
+}
+else
+{
+header("Location: registration.html?status=2");
 }
 ?>

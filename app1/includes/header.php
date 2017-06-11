@@ -1,8 +1,26 @@
+<?php
+@session_start();
+
+?>
 <html>
 <head>
-<title> Matrimony Application </title>
+<title> Demo Application </title>
+<link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
 <header>
-<a href="#"> Home </a> | <a href="registration.html"> Register </a> | <a href="#"> Login </a> 
+<div class="menu">
+<a href="index.php"> Home </a> |  
+<?php
+if(isset($_SESSION['uid'])) {
+echo ' <a href="myprofile.php"> My Profile </a> | <a href="logout.php"> Log out </a>';
+} else
+{
+echo ' <a href="registration.html"> Register </a> | <a href="login.html"> Login </a>';
+}
+?>
+</div>
+<div class="banner">
+<img src="images/banner.png" >
+</div> 
 </header>
