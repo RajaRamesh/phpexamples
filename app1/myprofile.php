@@ -9,7 +9,12 @@ include('includes/header.php');
 ?>
 
 My profile
+<a href="logout.php"> Log out </a>
+<?php
+echo $_SESSION['uid'];
+?>
 
 <?php
 include('includes/footer.php');
 ?>
+

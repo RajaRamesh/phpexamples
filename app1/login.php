@@ -29,11 +29,6 @@ if($uid) {
 } else
 {
 	//echo "login failed";
-	header('Location: login.html?error=1');
+	header('location: login.html?error=1');
 }
-
-
-
-
-
 ?>

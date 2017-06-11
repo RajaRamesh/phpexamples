@@ -1,6 +1,5 @@
 <?php
 @session_start();
-
 ?>
 <html>
 <head>
@@ -14,8 +13,7 @@
 <?php
 if(isset($_SESSION['uid'])) {
 echo ' <a href="myprofile.php"> My Profile </a> | <a href="logout.php"> Log out </a>';
-} else
-{
+} else {
 echo ' <a href="registration.html"> Register </a> | <a href="login.html"> Login </a>';
 }
 ?>
